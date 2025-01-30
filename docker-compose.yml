@@ -36,7 +36,7 @@ services:
       - DATABASE_STRING=postgresql+psycopg://skyvern:skyvern@postgres:5432/skyvern
       - BROWSER_TYPE=chromium-headful
       - ENABLE_OPENAI=true
-      - OPENAI_API_KEY=<your_openai_key>
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
       # If you want to use other LLM provider, like azure and anthropic:
       # - ENABLE_ANTHROPIC=true
       # - LLM_KEY=ANTHROPIC_CLAUDE3.5_SONNET
@@ -72,7 +72,7 @@ services:
     # you need to change the host in VITE_WSS_BASE_URL and VITE_API_BASE_URL to match your server ip
       - VITE_WSS_BASE_URL=ws://localhost:8000/api/v1
       - VITE_API_BASE_URL=https://skyvern.mediacomvalentin.de/api/v1
-      - VITE_SKYVERN_API_KEY=
+      - VITE_SKYVERN_API_KEY=${OPENAI_API_KEY}
     depends_on:
       skyvern:
         condition: service_healthy
