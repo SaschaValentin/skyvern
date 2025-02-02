@@ -36,6 +36,7 @@ services:
       - DATABASE_STRING=postgresql+psycopg://skyvern:skyvern@postgres:5432/skyvern
       - BROWSER_TYPE=chromium-headful
       - ENABLE_OPENAI=true
+      - LLM_KEY=OPENAI_GPT4O
       - OPENAI_API_KEY=${OPENAI_API_KEY}
       # If you want to use other LLM provider, like azure and anthropic:
       # - ENABLE_ANTHROPIC=true
